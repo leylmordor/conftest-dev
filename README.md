@@ -23,7 +23,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run Conftest OPA Action
-      uses: leylmordor/conftest-opa-action@v1
+      uses: leylmordor/conftest-opa@v1
       with:
         file: 'path/to/your/yaml/file.yaml' # Replace with the path to the YAML file you want to test
         policy-dir: 'path/to/your/policies' # Replace with the path to the directory containing your custom policies
