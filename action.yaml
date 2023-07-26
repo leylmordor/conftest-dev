@@ -1,0 +1,19 @@
+name: 'Conftest OPA'
+description: 'Conftest Action - Policy-Based Configuration Testing'
+author: 'leylmordor'
+inputs:
+  file:
+    description: 'Path to the YAML file for conftest test'
+    required: true
+    default: '.'
+  policy-dir:
+    description: 'Path to the directory containing the policies'
+    required: true
+    default: 'policy'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  entrypoint: sh
+  args:
+    - -c
+    - conftest test ${{ inputs.file }} -p ${{ inputs.policy-dir }}
