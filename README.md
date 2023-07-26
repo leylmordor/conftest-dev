@@ -2,7 +2,7 @@
 
 ## Description
 
-Conftest DEV is a GitHub Action that performs Policy-Based Configuration Testing using [Conftest](https://conftest.dev). It allows you to test your YAML files against custom policies to ensure compliance and best practices.
+Conftest DEV is a GitHub Action that performs Policy-Based Configuration Testing using [Conftest](https://conftest.dev). It allows you to test your configuration files against custom policies to ensure compliance and best practices.
 
 ## Usage
 
