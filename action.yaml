@@ -1,4 +1,4 @@
-name: 'Conftest Dev'
+name: 'Conftest OPA'
 description: 'Conftest Action - Policy-Based Configuration Testing'
 author: 'leylmordor'
 branding:
@@ -13,10 +13,13 @@ inputs:
     description: 'Path to the directory containing the policies'
     required: true
     default: 'policy'
+  options:
+    description: 'Options for Conftest https://www.conftest.dev/options/'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   entrypoint: sh
   args:
     - -c
-    - conftest test ${{ inputs.file }} -p ${{ inputs.policy-dir }}
+    - conftest test ${{ inputs.file }} -p ${{ inputs.policy-dir }} ${{ inputs.options }}
